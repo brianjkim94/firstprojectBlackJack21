@@ -3,6 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A GAME OF BLACKJACK 21</title>
-    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
+<body>
+    <div class="container">
+        <h1>BLACK<span>JACK</span> THE GAME OF 2<span>1</span></h1>
+        <div class="player">
+            <h2>Player</h2>
+            <p>Money: $<span id="player-money">10000</span></p>
+            <input type="number" id="bet-amount" placeholder="Enter Bet Amount">
+            <button onclick="placeBet()">Place Bet</button>
+            <button onclick="hit()">Hit</button>
+            <button onclick="stay()">Stay</button>
+        </div>
+        <div class="dealer">
+            <h2>Dealer</h2>
+            <div id="dealer-hand" class="hand"></div>
+        </div>
+        <div class="player-hand">
+            <h2>Your Hand</h2>
+            <div id="player-hand" class="hand"></div>
+            <p>Total Value: <span id="player-hand-value">0</span></p>
+        </div>
+        <div class="message">
+            <p id="message">Place your bet to start the game.</p>
+        </div>
+    </div>
+    <script src="./JS/blackjack.js"></script>
+</body>
+</html>

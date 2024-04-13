@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://lh3.googleusercontent.com/proxy/qLs1FFQa9xbhrep_L8ybbnDPsz-r2R2CwNoyIjM_rPqqwV6BiA9wVxylSzzwUKpfysCz6Iy0YBWcjzeCKnCoFAHVvAi4OY7BG262fF2UodoVhlqXIFdnXf5CqTuTFuk0bg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.player, .dealer, .player-hand {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.hand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 40px;
+    height: 60px;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.card-heart {
+    color: red;
+}
+
+.card-diamond {
+    color: red;
+}
+
+.card-spade {
+    color: black;
+}
+
+.card-club {
+    color: black;
+}
