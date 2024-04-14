@@ -10,7 +10,7 @@ To start playing visit
 
 ## <span style="font-size:larger;">**Description of the game:**</span>
 
-The game will be an interactive game of Blackjack where the player starts with $10,000 and play against the computer or dealer in this case. The player will be able to bet any increment as he or she wishes and the game will continue until the player eventually runs out of money. The game will follow standard Blackjack rules.
+The game will be an interactive game of Blackjack where the player starts with $10,000 and play against the computer or dealer in this case. The player will be able to bet in any increment as he or she wishes and the game will continue until the player eventually runs out of money. The game will follow standard Blackjack rules.
 
 ## <span style="font-size:larger;">**HOW TO PLAY**</span>
 
