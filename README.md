@@ -32,6 +32,8 @@ Step 6: You will win your bet amount if your hand beats dealer's hand or lose yo
 
 Step 7: You can continue to play as long as you do not run out of money. Good luck!
 
+![Alt Text](./IMG/mainPage.png)
+
 
 ## <span style="font-size:larger;">**To Install the game**</span>
 
@@ -163,5 +165,16 @@ function getRoundOutcome(dealerTotalValue) { // Defines a function named getRoun
 }
 ```
 
+
+## <span style="font-size:larger;">**FUTURE CONSIDERATIONS**</span>
+
+Features I could add, should I revisit this project. 
+
+1. `Double` Function - This function will allow the user to double or 2x his or her `betAmount` if the player chooses to do when faced with a hand that equals 10 or 11. Another button to appear under Player field called "Double" and once the player clicks on the button they will draw only one additional card with `betAmount` increased 2x. 
+
+2. `Split` Function - This function will allow 
+
 INITIAL WIREFRAMES:
 ![Screenshot 2024-04-10 at 11 45 58 PM](https://github.com/brianjkim94/firstprojectBlackJack21/assets/159219608/b09c83b9-054e-4e65-88c7-cb9040693ab8)
+
+
