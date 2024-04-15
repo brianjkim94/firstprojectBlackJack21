@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://lh3.googleusercontent.com/proxy/qLs1FFQa9xbhrep_L8ybbnDPsz-r2R2CwNoyIjM_rPqqwV6BiA9wVxylSzzwUKpfysCz6Iy0YBWcjzeCKnCoFAHVvAi4OY7BG262fF2UodoVhlqXIFdnXf5CqTuTFuk0bg');
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20220903/pngtree-blackjack-with-gambling-chips-blackjack-ace-face-card-photo-image_1294327.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -13,6 +13,15 @@ body {
 
 h1 {
     margin-bottom: 20px;
+    color: black;
+}
+
+h2 {
+    color: black;
+}
+
+p {
+    color: black;
 }
 
 .player, .dealer, .player-hand {
@@ -41,6 +50,7 @@ h1 {
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    background-color: white;
 }
 
 .card-heart {
