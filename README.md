@@ -2,7 +2,7 @@
 
 ## <span style="font-size:larger;">**BLACKJACK GAME OF 21**</span>
 
-SEI Project 1: Blackjack the game of 21
+SEI Project 1: Blackjack The Game of 21
 
 Casino at your fingertips. An online game of Blackjack!
 
@@ -44,10 +44,9 @@ Step 2: Open code . and open index.html in your browser.
 
 ## <span style="font-size:larger;">**HOW IT WORKS**</span>
 
-"BLACKJACK GAME OF 21" runs on for-loops that set up functions to shuffle deck and draw cards for both dealer and player side. Also main functions for the player to place a bet, hit and stay.
+"BLACKJACK THE GAME OF 21" runs on for-loops that set up functions to shuffle the deck and draw cards for both dealer and player side randomly. Also the main functions for the player are to place a bet, hit and stay.
 
-1. Deck will be shuffled and ensured randomness of the cards, by declaring arrays of suits and values. 
-Assign respective color to certain suits. The deck will be shuffled using reverse order to ensure randomenss.
+1. Deck will be shuffled and ensured randomness of the cards by iterating the deck array in reverse order. Arrays of suits and values will be declared to assign respective color to cards with a certain suit. Cards will be created with combination of value and suit and added to the deck using push method. 
 
 ```javascript
 // Deck of Cards setup
@@ -77,7 +76,7 @@ function shuffleDeck() {
 }
 ```
 
-2. Once the player bets his or her bet amount to play, the cards will be revealed. To display player's hand, iterate through each card in the player's hand. After iteration through player's hand is finished the game will display the card with set content of the card to its suit and value. Classes based on suits were added for styling in CSS. The same logic will apply for Dealer's hand. 
+2. Once the player bets his or her bet amount to play, the cards will be revealed. To display player's hand, the game will iterate through each card in the player's hand. After iteration through the player's hand is finished, the game will display the card with set content of the card to its suit and value. Classes based on suits were added for styling in CSS. The same logic will apply for the Dealer's hand. 
 
 ```javascript
 // Display the player's hand
@@ -89,7 +88,7 @@ function displayPlayerHand() {
         let cardDiv = document.createElement('div');
         cardDiv.classList.add('card'); 
 
-        // Add class based on suit
+        // Add classes based on suit
         if (playerHand[i].suit === '♥') {
             cardDiv.classList.add('card-heart');
         } else if (playerHand[i].suit === '♦') {
@@ -170,9 +169,9 @@ function getRoundOutcome(dealerTotalValue) { // Defines a function named getRoun
 
 Features I could add, should I revisit this project. 
 
-1. `Double` Function - This function will allow the user to double or 2x his or her `betAmount` if the player chooses to do when faced with a hand that equals 10 or 11. Another button to appear under Player field called "Double" and once the player clicks on the button they will draw only one additional card with `betAmount` increased 2x. 
+1. `Double` Function - This function will allow the player to double or 2x his or her `betAmount` if the player chooses to `double` when playing with a hand that equals 10 or 11. Another button to appear under Player field called "Double" and once the player clicks on the button they will draw only one additional card with `betAmount` increased 2x. 
 
-2. `Split` Function - This function will allow 
+2. `Split` Function - This function will allow the player to split his or her hand into two separate hands. This function separate two cards separately and allow the player to draw an additional card to pair each card of the newly split hands. Once the split hand is paired separately with additional cards, the player would `place a bet` on each hand and have the option to either `hit` or `stay` in each of his or her hand to reach as close to 21. Player will most likely use this function when he or she has a hand that has high values on both cards while the dealer has a low value faced up card. 
 
 INITIAL WIREFRAMES:
 ![Screenshot 2024-04-10 at 11 45 58 PM](https://github.com/brianjkim94/firstprojectBlackJack21/assets/159219608/b09c83b9-054e-4e65-88c7-cb9040693ab8)
