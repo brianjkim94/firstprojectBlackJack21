@@ -6,18 +6,13 @@ let playerHand = [];
 let dealerHand = [];
 
 // Deck of Cards setup
-function initializeDeck() {
+function setupDeck() {
     const suits = ['♥', '♦', '♠', '♣']; // Array of Card Suits
     const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']; // Array of Card Values
-    
+
     for (let i = 0; i < suits.length; i++) { // For loop through suits
         for (let j = 0; j < values.length; j++) { // For loop through values
-            let symbol;
-            if (suits[i] === '♥' || suits[i] === '♦') {
-                symbol = 'red'; // Assign color red for cards with heart and diamond symbols
-            } else {
-                symbol = 'black'; // Assign color black for cards with spade and club symbols
-            }
+
             deck.push({ value: values[j], suit: suits[i] }); // New object representing each combination of value and suit are created and added to the deck array using the push method.
         }
     }
@@ -27,7 +22,7 @@ function initializeDeck() {
 function shuffleDeck() {
     for (let i = deck.length - 1; i > 0; i--) { // For loop through deck array in reverse order to ensure more random shuffle
         const j = Math.floor(Math.random() * (i + 1)); // generate a random index
-        [deck[i], deck[j]] = [deck[j], deck[i]]; // Swap cards at indices i and j
+        [deck[i], deck[j]] = [deck[j], deck[i]]; // Swap cards at indices i and j (equal probability of ending up at any position of the shuffled deck)
     }
 }
 
@@ -93,9 +88,9 @@ function displayPlayerHand() {
 
     for (let i = 0; i < playerHand.length; i++) { // For loop through player's hand
         let cardDiv = document.createElement('div');
-        cardDiv.classList.add('card'); 
+        cardDiv.classList.add('card');
 
-        // Add class based on suit
+        // Add classes based on suit
         if (playerHand[i].suit === '♥') {
             cardDiv.classList.add('card-heart');
         } else if (playerHand[i].suit === '♦') {
@@ -105,7 +100,7 @@ function displayPlayerHand() {
         } else if (playerHand[i].suit === '♣') {
             cardDiv.classList.add('card-club');
         }
-        
+
         cardDiv.innerText = playerHand[i].value + playerHand[i].suit; // Combine both value and suit in one card 
         playerHandElement.appendChild(cardDiv); // Append card to player's hand
     }
@@ -113,6 +108,11 @@ function displayPlayerHand() {
     updatePlayerHandValue(); // Calls a function to update the displayed value of the player's hand
 } // Ends the displayPlayerHand function
 
+
+//In traditional blackjack, only one of the dealer's cards is initially visible to the player, 
+//with the other card being hidden until later in the game. 
+//Therefore, there's no need to display the total value of the dealer's hand until the appropriate moment in the game 
+//whiich is when the player chooses to 'stay'
 
 // Display the dealer's hand
 function displayDealerHand() {
@@ -123,7 +123,7 @@ function displayDealerHand() {
         let cardDiv = document.createElement('div');
         cardDiv.classList.add('card');
 
-        // Display all cards in the dealer's hand
+        // Display all cards in the dealer's hand except the first one - index 0
         if (i !== 0) {
             if (dealerHand[i].suit === '♥') {
                 cardDiv.classList.add('card-heart');
@@ -141,7 +141,7 @@ function displayDealerHand() {
             cardDiv.innerText = '?'; // Set Dealer's hidden card text or faced down
         }
 
-        dealerHandElement.appendChild(cardDiv);
+        dealerHandElement.appendChild(cardDiv); //each card div is appended to the dealerHandElement, which is the HTML element representing the dealer's hand
     }
 }
 
@@ -175,6 +175,7 @@ function stay() {
     updateMessage(getRoundOutcome(dealerTotalValue));
     playerBet = 0;
 }
+
 
 // Get the value of a hand
 function getHandValue(hand) {
@@ -227,7 +228,7 @@ function updateMessage(message) {
 
 // Start game
 function startGame() {
-    initializeDeck(); // Initialize the deck
+    setupDeck(); // Initialize the deck
     shuffleDeck(); // Shuffle the deck
     document.getElementById('player-money').innerText = playerMoney; // Player's money update
 }

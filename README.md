@@ -50,7 +50,7 @@ Step 2: Open code . and open index.html in your browser.
 
 ```javascript
 // Deck of Cards setup
-function initializeDeck() {
+function setupDeck() {
     const suits = ['♥', '♦', '♠', '♣']; // Array of Card Suits
     const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']; // Array of Card Values
 
