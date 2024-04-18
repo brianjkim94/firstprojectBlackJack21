@@ -76,7 +76,7 @@ function shuffleDeck() {
 }
 ```
 
-2. Once the player bets his or her bet amount to play, the cards will be revealed. To display player's hand, the game will iterate through each card in the player's hand. After iteration through the player's hand is finished, the game will display the card with set content of the card to its suit and value. Classes based on suits were added for styling in CSS. The same logic will apply for the Dealer's hand. 
+2. Once the player bets his or her bet amount to play, the cards will be revealed. To display player's hand, the game will iterate through each card in the player's hand. After iterating through the player's hand is finished, the game will display the card with set content of the card to its suit and value. Classes based on suits were added for styling in CSS. In traditional blackjack, only one of the dealer's cards is initially visible to the player, with the other card being hidden until later in the game. 
 
 ```javascript
 // Display the player's hand
@@ -172,6 +172,10 @@ Features I could add, should I revisit this project.
 1. `Double` Function - This function will allow the player to double or 2x his or her `betAmount` if the player chooses to `double` when playing with a hand that equals 10 or 11. Another button to appear under Player field called "Double" and once the player clicks on the button they will draw only one additional card with `betAmount` increased 2x. 
 
 2. `Split` Function - This function will allow the player to split his or her hand into two separate hands. This function separate two cards separately and allow the player to draw an additional card to pair each card of the newly split hands. Once the split hand is paired separately with additional cards, the player would `place a bet` on each hand and have the option to either `hit` or `stay` in each of his or her hand to reach as close to 21. Player will most likely use this function when he or she has a hand that has high values on both cards while the dealer has a low value faced up card. 
+
+3. Create a login of the player inside the game so the player can save where they have left off and continue to play with the same amount of money once they log back in the game. 
+
+4. Multiplayer feature. Multiple players can login and play against the dealer or against the "house". Every player will begin same money $10,000.
 
 INITIAL WIREFRAMES:
 ![Screenshot 2024-04-10 at 11 45 58 PM](https://github.com/brianjkim94/firstprojectBlackJack21/assets/159219608/b09c83b9-054e-4e65-88c7-cb9040693ab8)

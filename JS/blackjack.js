@@ -112,7 +112,7 @@ function displayPlayerHand() {
 //In traditional blackjack, only one of the dealer's cards is initially visible to the player, 
 //with the other card being hidden until later in the game. 
 //Therefore, there's no need to display the total value of the dealer's hand until the appropriate moment in the game 
-//whiich is when the player chooses to 'stay'
+//which is when the player chooses to 'stay'
 
 // Display the dealer's hand
 function displayDealerHand() {
@@ -194,6 +194,7 @@ function getHandValue(hand) {
         }
     }
 
+    // Decrement the count of Aces by 1 since we have used one Ace to reduce the total value
     while (totalValue > 21 && numAces > 0) {
         totalValue -= 10;
         numAces--;
