@@ -6,7 +6,7 @@ SEI Project 1: Blackjack The Game of 21
 
 Casino at your fingertips. An online game of Blackjack!
 
-To start playing visit 
+To start playing visit https://brianjkim94.github.io/firstprojectBlackJack21/
 
 
 ## <span style="font-size:larger;">**Description of the game:**</span>
